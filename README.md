@@ -57,11 +57,11 @@
 	a. define('JWT_AUTH_CORS_ENABLE', true);
 ```
 ```
-12. Add custom post type ui plugin to WP
+12. 	Add custom post type ui plugin to WP
 ```
 ```
-13. Add Advanced Custom Fields plugin to WP
+13. 	Add Advanced Custom Fields plugin to WP
 ```
 ```
-14. Add Advanced Custom Fields For Rest API plugin to WP 
+14. 	Add Advanced Custom Fields For Rest API plugin to WP 
 
