@@ -20,9 +20,11 @@
 
 9.	Add JWT Authentication plugin to WP and
     a. Update .htaccess file with the following
-	  b. RewriteCond %{HTTP:Authorization} ^(.*)
-       RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
-       SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+	   RewriteCond %{HTTP:Authorization} ^(.*)
+	  
+       	   RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+       
+       	   SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
 10. In wp.config add the following for your secret key
 	  a. define('JWT_AUTH_SECRET_KEY', 'tallwave-access');
