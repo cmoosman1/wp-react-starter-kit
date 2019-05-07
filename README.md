@@ -85,7 +85,8 @@ Clone the project and install node packages:
 ```
 	a. Home page = templateA
 ```
-```	b. About page = templateB
+```
+	b. About page = templateB
 ```
 ```
 	c. Contact page = templateC
