@@ -14,8 +14,8 @@ class DataStore {
             getAll:         this.getAll,
             getAllPages:    this.getAllPages,
             getAllPosts:    this.getAllPosts,
+            getAllMediaCardPosts: this.getAllMediaCardPosts,
             getPageBySlug:  this.getPageBySlug,
-            getPageByTemplateType: this.getPageByTemplateType,
         });
     }
 
@@ -39,23 +39,18 @@ class DataStore {
         return this.getState().data.posts; 
     }
 
+    // Returns all Media Cards
+    getAllMediaCardPosts(){
+        return this.getState().data.cards;
+    }
+
     // Returns a Page by provided slug
     getPageBySlug(slug){
         const pages = this.getState().data.pages;
         return pages[Object.keys(pages).find((page, i) => {
-            debugger;
             return pages[page].slug === slug;
         })] || {};
     }
-
-    // Returns a Page by provided slug
-    getPageByTemplateType(type){
-        const pages = this.getState().data.pages;
-        return pages[Object.keys(pages).find((page, i) => {
-            return pages[page].acf.template_type === type;
-        })] || {};
-    }
-
 }
 
 export default alt.createStore(DataStore, 'DataStore');
