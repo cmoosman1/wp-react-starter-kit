@@ -8,7 +8,7 @@ class DataActions {
 
         this.pagesEndPoint = `${appUrl}/wp-json/wp/v2/pages`; // Endpoint for getting Wordpress Pages
         this.postsEndPoint = `${appUrl}/wp-json/wp/v2/posts`; // Endpoint for getting Wordpress Posts
-        this.customPostEndPoint = `${appUrl}/wp-json/wp/v2/media_card`; // Endpoint for getting Wordpress Media Cards
+        
     }
 
     // Method for getting data from the provided end point url
@@ -34,16 +34,7 @@ class DataActions {
     getPosts(pages, cb){
         this.api(this.postsEndPoint).then((response)=>{
             const posts     = response
-            this.getMediaCardPosts(pages, posts, cb)
-        });
-        return true;
-    }
-
-    // Method for getting Media Card data
-    getMediaCardPosts(pages, posts, cb){
-        this.api(this.customPostEndPoint).then((response)=>{
-            const cards     = response
-            const payload   = { cards, pages, posts };
+            const payload   = { pages, posts };
 
             this.getSuccess(payload); // Pass returned data to the store
             cb(payload); // This callback will be used for dynamic rout building
