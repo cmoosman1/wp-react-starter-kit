@@ -4,7 +4,7 @@ This boilerplate will help you use React JS with Wordpress REST API.
 Clone the project and install node packages:
 
 1.	Git clone from repo
-2.	CD tw-wp-react-starter-kit
+2.	CD wp-react-starter-kit
 3.	Npm install
 4.	CD back to the project root dir
 5.	Check for open ports and kill them
