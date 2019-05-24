@@ -4,8 +4,8 @@ import alt   from 'flux/alt/alt.js';
 class DataActions {
 
     constructor() {
-        const appUrl = 'http://localhost:8000'; // Wordpress installation url
-
+        // const appUrl = 'http://kaosenvdev.wpengine.com'; // Wordpress url
+        const appUrl = 'https://sargonmc.wpengine.com'; // Wordpress url
         this.pagesEndPoint = `${appUrl}/wp-json/wp/v2/pages`; // Endpoint for getting Wordpress Pages
         this.postsEndPoint = `${appUrl}/wp-json/wp/v2/posts`; // Endpoint for getting Wordpress Posts
         

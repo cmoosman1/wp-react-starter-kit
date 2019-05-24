@@ -11,7 +11,7 @@ module.exports = {
 		'./src/scripts' // This is where Webpack will be looking for the entry index.js file
 	],
 	output: {
-		path: path.join(__dirname, 'build'), // This is used to specify folder for producion bundle
+		path: path.join(__dirname, '../build'), // This is used to specify folder for producion bundle
 		filename: 'bundle.js', // Filename for production bundle
 		publicPath: '/'
 	},
